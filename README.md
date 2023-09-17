@@ -5,8 +5,12 @@ loading.
 
 ## Installation
 
+PrepJSON has not been pushed to PyPi. Install from source:
+
 ```shell
-pip install prepjson
+git clone https://github.com/mathewhuen/prepjson.git
+cd prepjson
+pip install .
 ```
 
 ## Quick Start
