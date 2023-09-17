@@ -6,7 +6,7 @@ KNOWN_HASHES = dict()
 
 _home = os.environ.get("REFJSON_HOME")
 DATA_PATH = {
-    "refdirname": ".refjson",
+    "refdirname": ".prepjson",
     "home": os.path.expanduser("~") if _home is None else _home,
     "refdir": None,
     "single_ref_name": ".single.ref",
@@ -19,6 +19,7 @@ def get_refdir():
         return DATA_PATH["refdir"]
     else:
         return Path(DATA_PATH["home"]) / DATA_PATH["refdirname"]
+get_refdir().mkdir(exist_ok=True)
 
 
 def set_refdir(path):
