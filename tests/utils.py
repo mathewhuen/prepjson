@@ -19,6 +19,6 @@ def temp_home(new_home):
         os.environ[HOME_KEY] = default_home
 
 
-def save_data(data, path):
-    with open(path, 'w', encoding='utf8') as f:
+def save_data(data, path, newline='\n'):
+    with open(path, 'w', encoding='utf8', newline=newline) as f:
         json.dump(data, f, indent=0)

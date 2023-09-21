@@ -33,7 +33,7 @@ def load_from_reference(reference, path):
 
 
 def filehash(path):
-    return get_checksum(path, algorithm="SHA256")
+    return get_checksum(str(path), algorithm="SHA256").replace(' ', '')
 
 
 #def get_refpath_(sha):

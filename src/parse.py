@@ -150,7 +150,7 @@ def handle_table(f):
 def parse(path=None, open_kwargs=None, file=None, start=0):
     if path is not None:
         if open_kwargs is None:
-            open_kwargs = dict()
+            open_kwargs = {'newline': '\n'}
         f = open(path, **open_kwargs)
     elif file is not None:
         f = file
